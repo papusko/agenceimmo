@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Autres{% endblock %}
+
+{% block body %}
+    <h1>Create new Autres</h1>
+
+    {{ include('autres/_form.html.twig') }}
+
+    <a href="{{ path('autres_index') }}">back to list</a>
+{% endblock %}

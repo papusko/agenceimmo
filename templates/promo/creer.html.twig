@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<h1>Edition immobilière!</h1>{% endblock %}
+
+{% block body %}
+
+<div class="container mt-4">
+    <h1>Salut Promo CloudAfrica!  ✅</h1>
+    {{ form_start(form) }}
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.titre) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.raison) }}</div>
+		    </div> 
+    {{ form_widget(form) }}
+    <button class="btn btn-primary"> valider</button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container mt-4">
+    <h4>Modifications des informations du locataires  ✅</h4>
+    {{ form_start(form) }}
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.prenomLocataire) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.nomLocataire) }}</div>	
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.nationalite) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.telephone) }}</div>
+		    		
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.piecesFournis) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.typeLocataire) }}</div>	
+		    </div>
+    {{ form_widget(form) }}
+    <button class="btn btn-primary"> valider</button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

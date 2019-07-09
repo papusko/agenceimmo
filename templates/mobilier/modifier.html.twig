@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<h1>Edition immobilière!</h1>{% endblock %}
+
+{% block body %}
+
+#{% form_theme form 'bootstrap_4_layout.html.twig' %}
+<div class="container mt-4">
+    <h2 class="alert">Modification des biens  ✅</h2>
+    {{ form_start(form) }}
+    		<div class="row">
+		    	<div class="col-md-4">{{ form_row(form.titre) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.description) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.surface) }}</div>	
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.pieces) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.chambre) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.etage) }}</div>	
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.ville) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.adresse) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.solde) }}</div>	
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.prix) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.creation_at) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.imageFile) }}</div>	
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.imageFile) }}</div>	
+		    </div>
+    {{ form_widget(form) }}
+    <button> valider</button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

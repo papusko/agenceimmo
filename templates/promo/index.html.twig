@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MobilierController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+{% for message in app.flashes('success') %}
+	<div class="alert alert-success">
+		{{message}}
+	</div>
+
+{% endfor%}
+
+
+<div class="container">
+	<h2>Affichage Promos</h2>
+	<div class="row flex">
+		{% for p in promo %}
+			<div class="col -3">
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">	
+						<a  href="#">{{ p.titre()|date('d/m/y')}}</a>
+							<a  href="#">{{ p.titre}}</a>
+							<p class="card_text">{{ p.raison}} </p>
+						</h5>
+					</div>	
+				</div>
+			</div>
+		{% endfor %}
+	</div>	
+</div>
+
+{% endblock %}
+

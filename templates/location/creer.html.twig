@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container mt-4">
+    <h3>Enregistrement des locations  ✅</h3>
+    {{ form_start(form) }}
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.dateLocation) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.typeLocation) }}</div>	
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.montantLocation) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.caution) }}</div>
+		    </div>
+		    <div class="row">
+		    	<div class="col-md-4">{{ form_row(form.etatLocation) }}</div>
+		    	<div class="col-md-4">{{ form_row(form.locataire) }}</div>	
+		    </div>
+    {{ form_widget(form) }}
+    <button class="btn btn-primary"> valider</button>
+    {{ form_end(form) }}
+</div>
+{% endblock %}

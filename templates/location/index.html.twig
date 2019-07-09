@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}espace Location!{% endblock %}
+
+{% block body %}
+<div class="container">
+  {% for lo in location %}
+  <p><h2>Recapitulatif des locations:</h2></p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Date Location</th>
+        <th>Type Location</th>
+        <th>Montant</th>
+        <th>Caution</th>
+        <th>Etat Location</th>
+        <th> Locataire</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>{{lo.dateLocation()|date('d/m/y') }}</td>
+        <td>{{lo.typeLocation}}</td>
+        <td>{{lo.montantLocation}}</td>
+        <td>{{lo.caution}}</td>
+        <td>{{lo.etatLocation}}</td>
+        <td>{{lo.locataire.prenomLocataire }} {{lo.locataire.nomLocataire}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  {% endfor %}
+</div>
+{% endblock %}

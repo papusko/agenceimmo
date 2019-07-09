@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Autres index{% endblock %}
+
+{% block body %}
+    <h1>Autres index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Essaie</th>
+                <th>Contenu</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for autre in autres %}
+            <tr>
+                <td>{{ autre.id }}</td>
+                <td>{{ autre.essaie }}</td>
+                <td>{{ autre.contenu }}</td>
+                <td>
+                    <a href="{{ path('autres_show', {'id': autre.id}) }}">show</a>
+                    <a href="{{ path('autres_edit', {'id': autre.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('autres_new') }}">Create new</a>
+{% endblock %}

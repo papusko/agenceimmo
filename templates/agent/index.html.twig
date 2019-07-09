@@ -1,0 +1,34 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}Liste des agents !{% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <h2>Striped Rows</h2>
+  {% for a in agent %}
+  <p>Liste des agents:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Téléphone</th>
+        <th>Adresse</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>{{a.prenomAgent}}</td>
+        <td>{{a.nomAgent}}</td>
+        <td>{{a.telephone}}</td>
+        <td>{{a.adresseAgent}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  {% endfor %}
+</div>
+{% endblock %}
